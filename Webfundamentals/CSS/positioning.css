@@ -1,0 +1,12 @@
+#container{background-color:black;
+	display:inline-block;}
+#box1, #box2, #box3{
+	height:100px;
+	width:100px;
+	display:inline-block;
+	margin:10px;}
+#box1{background-color:yellow;
+	position:absolute;
+	left: 70px;}
+#box2{background-color:pink}
+#box3{background-color:orange}

@@ -1,0 +1,14 @@
+body{background-color:black
+}
+h1{color:#ffeb3b;
+	font-size:50px;
+	background-color:#3b3b42;
+	padding:33.5px 0px 33.5px 0px;
+	margin:0px 0px 0px 0px;
+}
+p{
+	color:blue;
+}
+ #important{color:red;}
+ a{display:block;
+ 	background-color:red;}
