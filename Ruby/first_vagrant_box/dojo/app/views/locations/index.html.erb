@@ -1,0 +1,27 @@
+<h1> Listing <%= pluralize(@locations.count, "Dojo") %></h1>
+
+<% if flash[:notice] %>
+	<p><%= flash[:notice] %></p>
+<% end %>
+
+<table>
+	<thead>
+		<tr>
+			<th>Coding Dojo Branch</th>
+			<th>Street</th>
+			<th>City</th>
+			<th>State</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @locations.each do |location| %>
+		<tr>
+			<td><%= location.branch %></td>
+			<td><%= location.street %></td>
+			<td><%= location.city %></td>
+			<td><%= location.state %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<a href="/locations/new">New Dojo</a>

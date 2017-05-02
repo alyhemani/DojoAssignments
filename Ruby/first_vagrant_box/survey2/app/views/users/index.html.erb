@@ -1,0 +1,33 @@
+<h1>Create New Entry</h1>
+<form action="/survey" method="post">
+	<input name="authenticity_token" value="<%=form_authenticity_token %>" type="hidden">
+	<div>
+		<label>Your Name:</label>
+		<input type="text" name="user[name]">
+	</div>
+	<div>
+		<label>Dojo Location:</label>
+		<select name="user[location]">
+			<option value="Dallas">Dallas</option>
+			<option value="Seattle">Seattle</option>
+			<option value="San Diego">San Diego</option>
+			<option value="Phoenix">Phoenix</option>
+		</select>
+	</div>
+	<div>
+		<label>Favorite Language:</label>
+		<select name="user[language]">
+			<option value="JavaScript">JavaScript</option>
+			<option value="Java">Java</option>
+			<option value="Python">Python</option>
+			<option value="Ruby">Ruby</option>
+		</select>
+	</div>
+	<div>
+		<label>Comment:</label>
+		<textarea name="user[comment]" rows="4" cols="35"></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Submit">
+	</div>
+</form>

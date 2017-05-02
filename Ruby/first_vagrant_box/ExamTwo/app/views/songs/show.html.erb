@@ -1,0 +1,21 @@
+<h1>Others who added <%= @song.artist %> - <%= @song.title %></h1>
+<a href="/songs">Dashboard</a>
+<%= link_to 'Logout', controller: 'sessions', action: 'destroy' %>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Times Added</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @playlists.group(:user_id).each do |user| %>
+		<tr>
+			<% if user.user_id != session[:user_id] %>
+			<td><a href="/users/ <%= user.user.id %>">user.user.first_name</a></td>
+			<td> <%= @playlists.where(user_id:user.user_id).count %></td>
+			<% end %>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

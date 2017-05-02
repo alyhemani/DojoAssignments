@@ -1,0 +1,29 @@
+<div>
+	<% if flash[:success] %>
+	<div>
+		<%= flash[:success] %>
+	</div>
+	<% end %>
+</div>
+<h1>Submitted Information</h1>
+<table>
+	<tr>
+		<td>Name:</td>
+		<td><%= @result['name'] %></td>
+	</tr>
+	<tr>
+		<td>Location:</td>
+		<td><%= @result['location'] %></td>
+	</tr>
+	<tr>
+		<td>Language:</td>
+		<td><%= @result['language'] %></td>
+	</tr>
+	<tr>
+		<td>Comment:</td>
+		<td><%= @result['comment'] %></td>
+	</tr>
+</table>
+<button>
+	<%= link_to "Go back", root_path %>
+</button>
